@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <link href="Home.css" rel="stylesheet" >
+            <div class="image-container">
+                <img src="C:\UBER KENYA\REGISTRATION\image4.png" alt="taxi">
+             
+                <img src="C:\UBER KENYA\REGISTRATION\image3.png" alt="taxi">
+             
+               
+              </div>
+              <div>
+                <p style="font-size: medium;">
+                    Contact us via phone: <a href="tel:0711215864">0711215864</a><br>
+                    Send us an email: <a href="mailto:taxikenya@gmail.com">taxikenya@gmail.com</a>
+                  </p>
+                  
+              </div>
+            <form id="comment-form">
+                <textarea id="comment-text" placeholder="Leave your comments"></textarea>
+               <div> <button id="submit-btn">Submit</button></div>
+              </form>
+              
+              <div id="comments-section">
+                
+              </div>
+              <script>
+                function submitComment(event) {
+                  event.preventDefault(); 
+                
+                  
+                  var commentText = document.getElementById("comment-text").value;
+                
+                  
+                  var commentElement = document.createElement("div");
+                  commentElement.innerText = commentText;
+                
+                 
+                  var commentsSection = document.getElementById("comments-section");
+                  commentsSection.appendChild(commentElement);
+                
+                 
+                  document.getElementById("comment-text").value = "";
+                }
+                
+               
+                document.getElementById("comment-form").addEventListener("submit", submitComment);
+                </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link href="styles.css" rel="stylesheet" >
+</head>
+<body>
+  <div id="loginPage">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="name">username:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="Password">Password:</label>
+        <input type="password" id="password" required>
+        
+      <button type="submit">Login</button>
+      
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+
+  
+
+  <script src="script.js">// Show/hide login and signup pages
+    if (window.location.href.includes('signup.html')) {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('signupPage').style.display = 'block';
+    } else {
+      document.getElementById('loginPage').style.display = 'block';
+      document.getElementById('signupPage').style.display = 'none';
+    }
+    
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your login validation logic
+    });
+    
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your signup validation logic
+    });
+    </script>
+  <script>
+   document.getElementById('registration').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the input values
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  // Check if the username and password are correct
+  if (username === 'yourUsername' && password === 'yourPassword') {
+    window.location.href = 'home.html'; // Redirect to the home page
+  } else {
+    alert('Incorrect username or password');
+  }
+});
+</script>
+
+  
+    
+
+  
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <link href="about.css" rel="stylesheet" >
+            <div class="dropdown">
+                <button class="dropdown-btn">Menu</button>
+                <div class="dropdown-content">
+                  <a href="TAXIKENYA.html">LOGIN</a>
+                  <a href="HOME.HTML">HOME</a>
+                 
+                </div>
+              </div>
+              <div class="image-container">
+                <img id="image1" alt="Image 1">
+                <img id="image2" alt="Image 2">
+              </div>
+              
+              <script>
+                var images = [
+                  "image1.jpg",
+                  "image2.jpg"
+                ];
+              
+                var currentIndex = 0;
+                var imageElements = document.querySelectorAll('.image-container img');
+              
+                function changeImage() {
+                  imageElements[0].src = images[currentIndex % images.length];
+                  currentIndex++;
+                }
+              
+                setInterval(changeImage, 5000); 
+              </script>
+              
+              <p style="font-family: Arial, Helvetica, sans-serif;">
+                NAIROBI, Kenya, Oct 17  Taxi drivers in Kenya have come together to form an association(TAXI KENYA) that brings together members drawn from the 47 counties in Kenya to address their welfare.
+            
+                The association known as TAXI KENYA will comprise Taxi and UBER drivers. 
+                
+                The new association’s interim chairman Mr. Mathew Maingi who is also the chairman of the Nyeri ubers said the drivers  have come together to give themselves a collective voice for positive change in their industry through effective engagement with the government.
+                
+                According to Maingi, the association has already set up county committees and identified representatives from eight counties namely Nairobi, Mombasa, Kisumu, Eldoret, Kwale, Kilifi, Nyeri, and Kiambu.
+                
+                Maingi further disclosed that they expect to inaugurate all county committees within the coming 30 days followed by a national conference at a date to be announced later.
+                
+                “For far too long, taxi drivers in Kenya have not had a strong voice to provide input about regulations and policies that affect their livelihood. This association will give them the strong voice they need and deserve,” said Maingi.
+                
+                During a forum in a Mombasa Hotel on Monday, the Taxi leadership also lauded the government for the gazettement of the Transport Regulations that govern the taxi industry.
+                
+                They called on the government through National Transport and Safety Authority (NTSA) to ensure that the implementation of the regulations was done in consultation and participation of the industry stakeholders.
+                
+                Mr. David Mwangi, secretary to the novel association observed that while everyone has a right to conduct business in the Country, the drivers wish to have a fair, level playing field across the various taxi mobile applications for them to compete fairly.
+              </p>
+              
+              
+        </body>
+    </head>
+</html>

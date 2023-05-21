@@ -1,0 +1,41 @@
+body{
+    background-color: bisque
+}
+
+  
+.image-container {
+    display: flex;
+  }
+  
+  .image-container img {
+    width: 50%; 
+    height: auto;
+    margin-right: 80px;
+  }
+  
+.comments-container {
+    display: contents;
+    flex-direction: column;
+    margin-bottom: 100%;
+  }
+  
+  #comment-box {
+   width: 60%;
+   height: auto;
+    font-size: 16px;
+    resize: horizontal;
+    border: 1px solid #cccccc23;
+  }
+  
+  #submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #submit-btn:hover {
+    background-color: #45a0493b;
+  }
+  
