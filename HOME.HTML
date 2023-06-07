@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,4 +50,72 @@
                 </script>
         </body>
     </head>
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <link href="Home.css" rel="stylesheet" >
+            
+            <div class="image-container">
+
+
+
+<img src="image4.png" width="1366" height="768" alt="">
+              </div>
+              <div>
+                <p style="font-size: medium;">
+                    <span style="color: #EEFFE3">
+                    Contact us via phone: <a href="tel:0711215864">0711215864</a><br>
+                    Send us an email: <a href="mailto:taxikenya@gmail.com">taxikenya@gmail.com</a>
+                  </span>
+                 </p>
+                  
+              </div>
+              <form action="save_comment.php" method="POST">
+               
+                <textarea name="comment" placeholder="Enter your comment"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+              
+              
+              <div id="comments-section">
+                
+              </div>
+              <script>
+                function submitComment(event) {
+                  event.preventDefault(); 
+                
+                  
+                  var commentText = document.getElementById("comment-text").value;
+                
+                  
+                  var commentElement = document.createElement("div");
+                  commentElement.innerText = commentText;
+                
+                 
+                  var commentsSection = document.getElementById("comments-section");
+                  commentsSection.appendChild(commentElement);
+                
+                 
+                  document.getElementById("comment-text").value = "";
+                }
+                
+               
+                document.getElementById("comment-form").addEventListener("submit", submitComment);
+                
+                </script>
+                <footer>
+                <span style="color: #FFFFFF">
+                 <b><p style="text-align: center">
+                    COPYRIGHT 2023 TAXIUNION        </p>
+                    </b>
+                    </span>
+                </footer>
+
+                
+                
+        </body>
+    </head>
+>>>>>>> Stashed changes
 </html>

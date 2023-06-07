@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,3 +92,99 @@
      
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link href="signup.css" rel="stylesheet" >
+</head>
+<body>
+  <div id="signupPage">
+    <h1>Sign Up</h1>
+    <form action="signup.php"method="post">
+        <label for="name">username:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required>
+        
+        <label for="password">password:</label>
+        <input type="password" id="password" required>
+    
+        <label for="password"> Confirm Password:</label>
+          <input type="password"id="password"required>
+       
+          <button id="signup-button">Sign Up</button>
+
+    </form>
+    <p>Already have an account? <a href="TAXIKENYA.html">Login</a></p>
+  </div>
+
+  <script src="script.js">
+    if (window.location.href.includes('signup.html')) {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('signupPage').style.display = 'block';
+    } else {
+      document.getElementById('loginPage').style.display = 'block';
+      document.getElementById('signupPage').style.display = 'none';
+    }
+    
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your login validation logic
+    });
+    
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your signup validation logic
+    });
+    </script></script>
+  <button id="emailbutton">Email us</button>
+  <script>
+    document.getElementById("emailButton").addEventListener("click", function() {
+      window.location.href = "mailto:taxikenya@gmail.com";
+    });
+  </script>
+  <br> <button id="tel">CALL US</button></br>
+   <script>
+     document.getElementById("TEL").addEventListener("click", function() {
+       window.location.href = "0711215864";
+     });
+   </script>
+     <script>
+      document.getElementById("signup-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Retrieve user inputs
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirm-password").value;
+
+  // Validate password match
+  if (password !== confirmPassword) {
+    var errorElement = document.createElement("p");
+    errorElement.className = "error";
+    errorElement.textContent = "Password and Confirm Password do not match.";
+    document.getElementById("signup-form").appendChild(errorElement);
+    return;
+  }
+
+  // Perform your own server-side validation here
+
+  // Redirect to the home page
+  window.location.href = "home.html";
+});
+
+
+     </script>
+     <script src="db_connect.php"></script>
+</body>
+</html>
+>>>>>>> Stashed changes

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
     font-family: Arial, sans-serif;
     background-color: palegoldenrod;
@@ -60,4 +61,68 @@ body {
   .error{
     color: red;
     
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: palegoldenrod;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+   text-decoration: ; 
+  }
+  img#logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+
+  }
+ 
+  
+  form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"], 
+  input[type="password"],
+  input[type="password"]{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  #signup-button {
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 30px 200px;
+    text-align: center; 
+    text-decoration:solid ; 
+    display: block;
+    font: size 200px;
+    cursor: grab;
+  }
+  .error{
+    color: red;
+    
+>>>>>>> Stashed changes
   }

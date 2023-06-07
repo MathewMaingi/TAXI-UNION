@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
     font-family: Arial, sans-serif;
     background-color: palegoldenrod;
@@ -59,4 +60,81 @@ body {
   
 
 
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('highway.jfif');
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+   text-decoration: ; 
+  }
+  img#logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .container {
+  background-image: url(image1.jpg);
+    background-size: cover;
+
+  }
+ 
+  
+  form {
+    max-width: 70%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+ input[type="password"]
+ {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+ .Button{
+  color: rgb(26, 235, 26);
+  width:auto ;
+  height: auto;
+ }
+ 
+
+  .error{
+    color: red;
+  }
+  h2{
+    text-align: left;
+  }
+
+  input[type="text"]{
+    width: 15%;
+    padding:5px ;
+    border: 1px rgb(208, 214, 211);
+    border-radius: 4px;
+
+  }
+  .Button{
+    color: green;
+    width: auto;
+    height: auto;
+  }
+  
+
+>>>>>>> Stashed changes
   

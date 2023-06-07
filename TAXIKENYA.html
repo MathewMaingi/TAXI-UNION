@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,3 +71,114 @@
   
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link href="styles.css" rel="stylesheet" >
+</head>
+<body>
+  <div id="loginPage">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="name">username:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="Password">Password:</label>
+        <input type="password" id="password" required>
+        
+      <button type="submit">Login</button>
+      
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign Up </a>
+        style="text-align: right"
+    </p>
+
+  </div>
+  <div>
+    <button onclick="verifyHuman()">Verify as Human</button>
+  </div>
+
+  
+
+  <script src="script.js">// Show/hide login and signup pages
+    if (window.location.href.includes('signup.html')) {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('signupPage').style.display = 'block';
+    } else {
+      document.getElementById('loginPage').style.display = 'block';
+      document.getElementById('signupPage').style.display = 'none';
+    }
+    
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your login validation logic
+    });
+    
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+    
+      // Your signup validation logic
+    });
+    </script>
+  <script>
+   document.getElementById('registration').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get the input values
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  // Check if the username and password are correct
+  if (username === 'yourUsername' && password === 'yourPassword') {
+    window.location.href = 'home.html'; // Redirect to the home page
+  } else {
+    alert('Incorrect username or password');
+  }
+});
+</script>
+
+  <script>
+    function generateEquation() {
+      var operators = ['+', '-']; // Array of operators
+      var operator = operators[Math.floor(Math.random() * operators.length)]; // Select a random operator
+      var num1 = Math.floor(Math.random() * 10) + 1; // Generate a random number between 1 and 10
+      var num2 = Math.floor(Math.random() * 10) + 1; // Generate another random number between 1 and 10
+      var equation = num1 + ' ' + operator + ' ' + num2; // Build the equation as a string
+      return equation;
+    }
+    
+    function validateEquation() {
+      var userInput = document.getElementById('answer').value; // Get the user's answer from the input field
+      var equation = document.getElementById('equation').textContent; // Get the equation text
+      var result = eval(equation); // Evaluate the equation
+      
+      if (parseInt(userInput) === result) {
+        alert('You are a human!');
+      } else {
+        alert('You are a robot!');
+      }
+      
+      // Generate a new equation
+      document.getElementById('equation').textContent = generateEquation();
+      document.getElementById('answer').value = '';
+    }
+  </script>
+    <h2 id="equation"> </h2>
+    <input type="text" id="answer" placeholder="Enter the answer">
+    <button onclick="validateEquation()">Submit</button>
+<script>
+   // Generate the first equation when the page loads
+  document.getElementById('equation').textContent = generateEquation(); 
+</script>
+  
+</body>
+</html>
+>>>>>>> Stashed changes
