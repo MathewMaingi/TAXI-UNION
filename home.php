@@ -16,13 +16,10 @@ if (!$conn) {
 $username = $_POST['username'];
 $comment = $_POST['comment'];
 
-// Insert comment into the database
-$query = "INSERT INTO comments (username, comment) VALUES ('$username', '$comment')";
-if (mysqli_query($conn, $query)) {
-  echo "Comment saved successfully!";
-} else {
-  echo "Error: " . $query . "<br>" . mysqli_error($conn);
-}
+$stmt = $conn->prepare("INSERT INTO members (username, comments) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $username, $comments);
+$stmt->execute();
+
 
 // Close the database connection
 mysqli_close($conn);

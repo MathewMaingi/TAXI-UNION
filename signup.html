@@ -16,10 +16,10 @@
         
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" required>
-        
+
         <label for="password">password:</label>
         <input type="password" id="password" required>
-    
+
         <label for="password"> Confirm Password:</label>
           <input type="password"id="password"required>
 
@@ -37,17 +37,17 @@
       document.getElementById('loginPage').style.display = 'block';
       document.getElementById('signupPage').style.display = 'none';
     }
-    
+
     // Handle form submission
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form submission
-    
+
       // Your login validation logic
     });
-    
+
     document.getElementById('signupForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form submission
-    
+
       // Your signup validation logic
     });
     </script></script>
@@ -64,24 +64,31 @@
      });
    </script>
      <script>
-      document.getElementById("signup-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+      document.querySelector('#signupForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
 
-  // Retrieve user inputs
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirm-password").value;
+    // Retrieve form data
+    var username = document.querySelector('#username').value;
+    var email = document.querySelector('#email').value;
+    var password = document.querySelector('#password').value;
 
-  // Validate password match
-  if (password !== confirmPassword) {
-    var errorElement = document.createElement("p");
-    errorElement.className = "error";
-    errorElement.textContent = "Password and Confirm Password do not match.";
-    document.getElementById("signup-form").appendChild(errorElement);
-    return;
-  }
-
-  // Perform your own server-side validation here
+    // Send form data to process_signup.php using fetch or XMLHttpRequest
+    fetch('process_signup.php', {
+        method: 'POST',
+        body: new URLSearchParams({
+            'username': username,
+            'email': email,
+            'password': password
+        })
+    })
+    .then(function(response) {
+        // Handle the response from process_signup.php
+        // You can display a success message or perform other actions
+    })
+    .catch(function(error) {
+        // Handle errors, if any
+    });
+});
 
   // Redirect to the home page
   window.location.href = "home.html";
